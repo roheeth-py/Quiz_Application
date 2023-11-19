@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:quiz_app/data/qa.dart';
 import 'package:quiz_app/question_summary.dart';
 
@@ -37,27 +38,43 @@ class Result extends StatelessWidget {
       mainAxisSize: MainAxisSize.max,
       children: [
         Text(
-            "You have answers $crtanswers out of $totalquestions questions \n correctly!",
-            textAlign: TextAlign.center,
-        style: const TextStyle(fontSize: 18, color: Colors.white, fontWeight: FontWeight.bold),),
+          "You have answers $crtanswers out of $totalquestions questions \n correctly!",
+          textAlign: TextAlign.center,
+          style: const TextStyle(
+              fontSize: 18, color: Color.fromARGB(255, 227, 156, 255), fontWeight: FontWeight.bold),
+        ),
         const SizedBox(
           height: 25,
         ),
         QuestionSummary(summaryData),
-        const SizedBox(height: 15,),
+        const SizedBox(
+          height: 15,
+        ),
         TextButton(
           onPressed: restartQuiz,
           child: const Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(Icons.restore),
+              Icon(
+                Icons.refresh,
+                color: Colors.white60,
+              ),
               Text(
                 "Restart Quiz",
                 textAlign: TextAlign.center,
+                style: TextStyle(color: Colors.white60),
               )
             ],
           ),
         ),
+        const SizedBox(
+          height: 30,
+        ),
+        Text(
+          "From\nRoheeth Dhanasekaran",
+          style: GoogleFonts.reenieBeanie(color: Colors.white70, fontSize: 22),
+          textAlign: TextAlign.center,
+        )
       ],
     );
   }

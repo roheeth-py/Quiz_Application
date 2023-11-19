@@ -22,8 +22,9 @@ class QuestionSummary extends StatelessWidget {
                     decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         color: (data["user_ans"] == data["crt_ans"])
-                            ? Colors.lightBlueAccent
-                            : Colors.pinkAccent),
+                            ? const Color.fromARGB(255, 150, 198, 241)
+                            : const Color.fromARGB(255, 249, 133, 241),
+                    ),
                     child: Text(
                       (data["q_index"] as int).toString(),
                       style: const TextStyle(
@@ -61,7 +62,7 @@ class QuestionSummary extends StatelessWidget {
                           textAlign: TextAlign.left,
                           style: const TextStyle(
                               fontSize: 18,
-                              color: Colors.lightBlueAccent,
+                              color: Color.fromARGB(255, 150, 198, 241),
                               fontWeight: FontWeight.normal),
                         ),
                         const SizedBox(

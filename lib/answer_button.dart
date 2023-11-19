@@ -19,7 +19,7 @@ class Answer extends StatelessWidget {
                 horizontal: 40,
               ),
               foregroundColor: Colors.white,
-              backgroundColor: Colors.deepPurple,
+              backgroundColor: const Color.fromARGB(255, 33, 1, 95),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30),
               )),
