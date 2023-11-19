@@ -41,7 +41,9 @@ class Result extends StatelessWidget {
           "You have answers $crtanswers out of $totalquestions questions \n correctly!",
           textAlign: TextAlign.center,
           style: const TextStyle(
-              fontSize: 18, color: Color.fromARGB(255, 227, 156, 255), fontWeight: FontWeight.bold),
+              fontSize: 18,
+              color: Color.fromARGB(255, 227, 156, 255),
+              fontWeight: FontWeight.bold),
         ),
         const SizedBox(
           height: 25,
@@ -70,11 +72,13 @@ class Result extends StatelessWidget {
         const SizedBox(
           height: 30,
         ),
-        Text(
-          "From\nRoheeth Dhanasekaran",
-          style: GoogleFonts.reenieBeanie(color: Colors.white70, fontSize: 22),
-          textAlign: TextAlign.center,
-        )
+        DefaultTextStyle(
+            style:
+                GoogleFonts.reenieBeanie(color: Colors.white70, fontSize: 22),
+            child: const Text(
+              "From\nRoheeth Dhanasekaran",
+              textAlign: TextAlign.center,
+            ),)
       ],
     );
   }
